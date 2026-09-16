@@ -20,12 +20,31 @@ const canciones = [
     new Cancion("No Roots", "Alice Merton")
 ];
 console.log(canciones);
+const energiaMyWay = document.querySelector("#energiaMyWay");
+const valorEnergiaMyWay = document.querySelector("#valorEnergiaMyWay");
 
-const energia = document.querySelector("#energia");
-const valorEnergia = document.querySelector("#valorEnergia");
-
-energia.addEventListener("input", () => {
-  valorEnergia.textContent = energia.value;
+if (energiaMyWay && valorEnergiaMyWay) {
+energiaMyWay.addEventListener("input", () => {
+  valorEnergiaMyWay.textContent = energiaMyWay.textContent;
 });
+}
+
+const energiaIronFist = document.querySelector("#energiaIronFist");
+const valorEnergiaIronFist = document.querySelector("#valorEnergiaIronFist");
+
+if (energiaIronFist && valorEnergiaIronFist) {
+  energiaIronFist.addEventListener("input", () => {
+    valorEnergiaIronFist.textContent = energiaIronFist.value;
+  });
+}
+
+const energiaNoRoots = document.querySelector("#energiaNoRoots");
+const valorEnergiaNoRoots = document.querySelector("#valorEnergiaNoRoots");
+
+if (energiaNoRoots && valorEnergiaNoRoots) {
+  energiaNoRoots.addEventListener("input", () => {
+    valorEnergiaNoRoots.textContent = energiaNoRoots.value;
+  });
+}
 export {};
 //# sourceMappingURL=main.js.map
