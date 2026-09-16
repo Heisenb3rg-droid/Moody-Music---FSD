@@ -12,6 +12,215 @@
     orientada a clasificar canciones según diferentes características musicales como energía, alegría, relajación y nostalgia. 
     El usuario podrá modificar estos valores mediante sliders y la aplicación generará una descripción del "mood" de la canción a partir de esos datos.
     Tengo planeado aplicar conceptos de OOP, DOM, eventos y conceptos de API.-->
+
+  <section>
+    <h2>My Way</h2> <!-- CANCIÓN 1 -->
+    <p>Frank Sinatra</p>
+
+    <audio id="audioMyWay">
+      <source src="./audios/My Way.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="botonMyWay">▶</button>
+
+    <input
+      type="range"
+      id="progresoMyWay"
+      min="0"
+      max="100"
+      value="0"
+    >
+
+    <h3>Mood</h3>
+
+    <label for="energiaMyWay">Energía</label>
+    <input
+      type="range"
+      id="energiaMyWay"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorEnergiaMyWay">50</span></p>
+
+    <label for="alegriaMyWay">Alegría</label>
+    <input
+      type="range"
+      id="alegriaMyWay"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorAlegriaMyWay">50</span></p>
+
+    <label for="relajacionMyWay">Relajación</label>
+    <input
+      type="range"
+      id="relajacionMyWay"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorRelajacionMyWay">50</span></p>
+
+    <label for="nostalgiaMyWay">Nostalgia</label>
+    <input
+      type="range"
+      id="nostalgiaMyWay"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorNostalgiaMyWay">50</span></p>
+
+    <button id="analizarMyWay">Analizar Mood</button>
+
+    <p id="resultadoMyWay"></p>
+  </section>
+
+  <section>
+    <h2>THE IRON FIST</h2> <!-- CANCIÓN 2 -->
+    <p>Masaru Yokoyama</p>
+
+    <audio id="audioIronFist">
+      <source src="./audios/THE IRON FIST.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="botonIronFist">▶</button>
+
+    <input
+      type="range"
+      id="progresoIronFist"
+      min="0"
+      max="100"
+      value="0"
+    >
+
+    <h3>Mood</h3>
+
+    <label for="energiaIronFist">Energía</label>
+    <input
+      type="range"
+      id="energiaIronFist"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorEnergiaIronFist">50</span></p>
+
+    <label for="alegriaIronFist">Alegría</label>
+    <input
+      type="range"
+      id="alegriaIronFist"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorAlegriaIronFist">50</span></p>
+
+    <label for="relajacionIronFist">Relajación</label>
+    <input
+      type="range"
+      id="relajacionIronFist"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorRelajacionIronFist">50</span></p>
+
+    <label for="nostalgiaIronFist">Nostalgia</label>
+    <input
+      type="range"
+      id="nostalgiaIronFist"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorNostalgiaIronFist">50</span></p>
+
+    <button id="analizarIronFist">Analizar Mood</button>
+
+    <p id="resultadoIronFist"></p>
+  </section>
+
+  <section>
+    <h2>No Roots</h2> <!-- CANCIÓN 3 -->
+    <p>Alice Merton</p>
+
+    <audio id="audioNoRoots">
+      <source src="./audios/Alice Merton - No Roots.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="botonNoRoots">▶</button>
+
+    <input
+      type="range"
+      id="progresoNoRoots"
+      min="0"
+      max="100"
+      value="0"
+    >
+
+    <h3>Mood</h3>
+
+    <label for="energiaNoRoots">Energía</label>
+    <input
+      type="range"
+      id="energiaNoRoots"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorEnergiaNoRoots">50</span></p>
+
+    <label for="alegriaNoRoots">Alegría</label>
+    <input
+      type="range"
+      id="alegriaNoRoots"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorAlegriaNoRoots">50</span></p>
+
+    <label for="relajacionNoRoots">Relajación</label>
+    <input
+      type="range"
+      id="relajacionNoRoots"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorRelajacionNoRoots">50</span></p>
+
+    <label for="nostalgiaNoRoots">Nostalgia</label>
+    <input
+      type="range"
+      id="nostalgiaNoRoots"
+      min="0"
+      max="100"
+      value="50"
+    >
+
+    <p>Valor: <span id="valorNostalgiaNoRoots">50</span></p>
+
+    <button id="analizarNoRoots">Analizar Mood</button>
+
+    <p id="resultadoNoRoots"></p>
+  </section>
+
 </body>
+
 <script type="module" src="./src/main.js"></script>
 </html>

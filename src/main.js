@@ -20,5 +20,12 @@ const canciones = [
     new Cancion("No Roots", "Alice Merton")
 ];
 console.log(canciones);
+
+const energia = document.querySelector("#energia");
+const valorEnergia = document.querySelector("#valorEnergia");
+
+energia.addEventListener("input", () => {
+  valorEnergia.textContent = energia.value;
+});
 export {};
 //# sourceMappingURL=main.js.map

@@ -24,3 +24,10 @@ const canciones: Cancion[] = [ //Nombres de las 3 canciones y sus respectivos ar
 ];
 
 console.log(canciones);
+
+const energia = document.querySelector("#energia");
+const valorEnergia = document.querySelector("#valorEnergia");
+
+energia.addEventListener("input", () => {
+  valorEnergia.textContent = energia.value;
+});
