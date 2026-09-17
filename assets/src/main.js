@@ -61,21 +61,21 @@ const alegriaIronFist = document.querySelector("#alegriaIronFist");
 const valorAlegriaIronFist = document.querySelector("#valorAlegriaIronFist");
 if (alegriaIronFist && valorAlegriaIronFist) {
     alegriaIronFist.addEventListener("input", () => {
-        valorAlegriaIronFist.textContent = alegriaIronFist.value;
+        valorAlegriaIronFist.textContent = alegriaIronFist.textContent;
     });
 }
 const relajacionIronFist = document.querySelector("#relajacionIronFist");
 const valorRelajacionIronFist = document.querySelector("#valorRelajacionIronFist");
 if (relajacionIronFist && valorRelajacionIronFist) {
     relajacionIronFist.addEventListener("input", () => {
-        valorRelajacionIronFist.textContent = relajacionIronFist.value;
+        valorRelajacionIronFist.textContent = relajacionIronFist.textContent;
     });
 }
 const nostalgiaIronFist = document.querySelector("#nostalgiaIronFist");
 const valorNostalgiaIronFist = document.querySelector("#valorNostalgiaIronFist");
 if (nostalgiaIronFist && valorNostalgiaIronFist) {
     nostalgiaIronFist.addEventListener("input", () => {
-        valorNostalgiaIronFist.textContent = nostalgiaIronFist.value;
+        valorNostalgiaIronFist.textContent = nostalgiaIronFist.textContent;
     });
 }
 //Los 4 valores de la canción 3
@@ -83,28 +83,28 @@ const energiaNoRoots = document.querySelector("#energiaNoRoots");
 const valorEnergiaNoRoots = document.querySelector("#valorEnergiaNoRoots");
 if (energiaNoRoots && valorEnergiaNoRoots) {
     energiaNoRoots.addEventListener("input", () => {
-        valorEnergiaNoRoots.textContent = energiaNoRoots.value;
+        valorEnergiaNoRoots.textContent = energiaNoRoots.textContent;
     });
 }
 const alegriaNoRoots = document.querySelector("#alegriaNoRoots");
 const valorAlegriaNoRoots = document.querySelector("#valorAlegriaNoRoots");
 if (alegriaNoRoots && valorAlegriaNoRoots) {
     alegriaNoRoots.addEventListener("input", () => {
-        valorAlegriaNoRoots.textContent = alegriaNoRoots.value;
+        valorAlegriaNoRoots.textContent = alegriaNoRoots.textContent;
     });
 }
 const relajacionNoRoots = document.querySelector("#relajacionNoRoots");
 const valorRelajacionNoRoots = document.querySelector("#valorRelajacionNoRoots");
 if (relajacionNoRoots && valorRelajacionNoRoots) {
     relajacionNoRoots.addEventListener("input", () => {
-        valorRelajacionNoRoots.textContent = relajacionNoRoots.value;
+        valorRelajacionNoRoots.textContent = relajacionNoRoots.textContent;
     });
 }
 const nostalgiaNoRoots = document.querySelector("#nostalgiaNoRoots");
 const valorNostalgiaNoRoots = document.querySelector("#valorNostalgiaNoRoots");
 if (nostalgiaNoRoots && valorNostalgiaNoRoots) {
     nostalgiaNoRoots.addEventListener("input", () => {
-        valorNostalgiaNoRoots.textContent = nostalgiaNoRoots.value;
+        valorNostalgiaNoRoots.textContent = nostalgiaNoRoots.textContent;
     });
 }
 const audioMyWay = document.querySelector("#audioMyWay"); //Botón de play/pausa para la canción 1
