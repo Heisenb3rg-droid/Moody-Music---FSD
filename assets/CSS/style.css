@@ -81,7 +81,7 @@ audio {
 }
 
 
-/*
+/* //Acordate de hacer media query tanto para tablet como teléfono
 
 @media (max-width: 600px) {
 
