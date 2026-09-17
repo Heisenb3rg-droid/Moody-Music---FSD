@@ -20,121 +20,179 @@ const canciones = [
     new Cancion("No Roots", "Alice Merton")
 ];
 console.log(canciones);
-
 //Los 4 valores de la canción 1
-
 const energiaMyWay = document.querySelector("#energiaMyWay");
 const valorEnergiaMyWay = document.querySelector("#valorEnergiaMyWay");
-
 if (energiaMyWay && valorEnergiaMyWay) {
-energiaMyWay.addEventListener("input", () => {
-  valorEnergiaMyWay.textContent = energiaMyWay.value;
-});
+    energiaMyWay.addEventListener("input", () => {
+        valorEnergiaMyWay.textContent = energiaMyWay.value;
+    });
 }
-
 const alegriaMyWay = document.querySelector("#alegriaMyWay");
 const valorAlegriaMyWay = document.querySelector("#valorAlegriaMyWay");
-
 if (alegriaMyWay && valorAlegriaMyWay) {
-  alegriaMyWay.addEventListener("input", () => {
-    valorAlegriaMyWay.textContent = alegriaMyWay.value;
-  });
+    alegriaMyWay.addEventListener("input", () => {
+        valorAlegriaMyWay.textContent = alegriaMyWay.value;
+    });
 }
-
 const relajacionMyWay = document.querySelector("#relajacionMyWay");
 const valorRelajacionMyWay = document.querySelector("#valorRelajacionMyWay");
-
 if (relajacionMyWay && valorRelajacionMyWay) {
-  relajacionMyWay.addEventListener("input", () => {
-    valorRelajacionMyWay.textContent = relajacionMyWay.value;
-  });
+    relajacionMyWay.addEventListener("input", () => {
+        valorRelajacionMyWay.textContent = relajacionMyWay.value;
+    });
 }
-
 const nostalgiaMyWay = document.querySelector("#nostalgiaMyWay");
 const valorNostalgiaMyWay = document.querySelector("#valorNostalgiaMyWay");
-
 if (nostalgiaMyWay && valorNostalgiaMyWay) {
-  nostalgiaMyWay.addEventListener("input", () => {
-    valorNostalgiaMyWay.textContent = nostalgiaMyWay.value;
-  });
+    nostalgiaMyWay.addEventListener("input", () => {
+        valorNostalgiaMyWay.textContent = nostalgiaMyWay.value;
+    });
 }
-
 //Los 4 valores de la canción 2
-
 const energiaIronFist = document.querySelector("#energiaIronFist");
 const valorEnergiaIronFist = document.querySelector("#valorEnergiaIronFist");
-
 if (energiaIronFist && valorEnergiaIronFist) {
-  energiaIronFist.addEventListener("input", () => {
-    valorEnergiaIronFist.textContent = energiaIronFist.value;
-  });
+    energiaIronFist.addEventListener("input", () => {
+        valorEnergiaIronFist.textContent = energiaIronFist.value;
+    });
 }
-
-
-
+const alegriaIronFist = document.querySelector("#alegriaIronFist");
+const valorAlegriaIronFist = document.querySelector("#valorAlegriaIronFist");
+if (alegriaIronFist && valorAlegriaIronFist) {
+    alegriaIronFist.addEventListener("input", () => {
+        valorAlegriaIronFist.textContent = alegriaIronFist.value;
+    });
+}
+const relajacionIronFist = document.querySelector("#relajacionIronFist");
+const valorRelajacionIronFist = document.querySelector("#valorRelajacionIronFist");
+if (relajacionIronFist && valorRelajacionIronFist) {
+    relajacionIronFist.addEventListener("input", () => {
+        valorRelajacionIronFist.textContent = relajacionIronFist.value;
+    });
+}
+const nostalgiaIronFist = document.querySelector("#nostalgiaIronFist");
+const valorNostalgiaIronFist = document.querySelector("#valorNostalgiaIronFist");
+if (nostalgiaIronFist && valorNostalgiaIronFist) {
+    nostalgiaIronFist.addEventListener("input", () => {
+        valorNostalgiaIronFist.textContent = nostalgiaIronFist.value;
+    });
+}
 //Los 4 valores de la canción 3
-
 const energiaNoRoots = document.querySelector("#energiaNoRoots");
 const valorEnergiaNoRoots = document.querySelector("#valorEnergiaNoRoots");
-
 if (energiaNoRoots && valorEnergiaNoRoots) {
-  energiaNoRoots.addEventListener("input", () => {
-    valorEnergiaNoRoots.textContent = energiaNoRoots.value;
-  });
+    energiaNoRoots.addEventListener("input", () => {
+        valorEnergiaNoRoots.textContent = energiaNoRoots.value;
+    });
 }
-
-
+const alegriaNoRoots = document.querySelector("#alegriaNoRoots");
+const valorAlegriaNoRoots = document.querySelector("#valorAlegriaNoRoots");
+if (alegriaNoRoots && valorAlegriaNoRoots) {
+    alegriaNoRoots.addEventListener("input", () => {
+        valorAlegriaNoRoots.textContent = alegriaNoRoots.value;
+    });
+}
+const relajacionNoRoots = document.querySelector("#relajacionNoRoots");
+const valorRelajacionNoRoots = document.querySelector("#valorRelajacionNoRoots");
+if (relajacionNoRoots && valorRelajacionNoRoots) {
+    relajacionNoRoots.addEventListener("input", () => {
+        valorRelajacionNoRoots.textContent = relajacionNoRoots.value;
+    });
+}
+const nostalgiaNoRoots = document.querySelector("#nostalgiaNoRoots");
+const valorNostalgiaNoRoots = document.querySelector("#valorNostalgiaNoRoots");
+if (nostalgiaNoRoots && valorNostalgiaNoRoots) {
+    nostalgiaNoRoots.addEventListener("input", () => {
+        valorNostalgiaNoRoots.textContent = nostalgiaNoRoots.value;
+    });
+}
 const audioMyWay = document.querySelector("#audioMyWay"); //Botón de play/pausa para la canción 1
 const botonMyWay = document.querySelector("#botonMyWay");
-
 if (audioMyWay && botonMyWay) {
-  botonMyWay.addEventListener("click", () => {
-
-    if (audioMyWay.paused) {
-      audioMyWay.play();
-      botonMyWay.textContent = "⏸";
-    } else {
-      audioMyWay.pause();
-      botonMyWay.textContent = "▶";
-    }
-
-  });
+    botonMyWay.addEventListener("click", () => {
+        if (audioMyWay.paused) {
+            audioMyWay.play();
+            botonMyWay.textContent = "⏸";
+        }
+        else {
+            audioMyWay.pause();
+            botonMyWay.textContent = "▶";
+        }
+    });
 }
-
-
+const progresoMyWay = document.querySelector("#progresoMyWay"); //Barra de audio para la canción 1
+if (audioMyWay && progresoMyWay) {
+    audioMyWay.addEventListener("timeupdate", () => {
+        if (audioMyWay.duration > 0) {
+            const porcentaje = (audioMyWay.currentTime / audioMyWay.duration) * 100;
+            progresoMyWay.value = String(porcentaje);
+        }
+    });
+}
+if (audioMyWay && progresoMyWay) {
+    progresoMyWay.addEventListener("input", () => {
+        const porcentaje = Number(progresoMyWay.value);
+        audioMyWay.currentTime = (porcentaje / 100) * audioMyWay.duration;
+    });
+}
 const audioIronFist = document.querySelector("#audioIronFist"); //Botón de play/pausa para la canción 2
 const botonIronFist = document.querySelector("#botonIronFist");
-
 if (audioIronFist && botonIronFist) {
-  botonIronFist.addEventListener("click", () => {
-
-    if (audioIronFist.paused) {
-      audioIronFist.play();
-      botonIronFist.textContent = "⏸";
-    } else {
-      audioIronFist.pause();
-      botonIronFist.textContent = "▶";
-    }
-
-  });
+    botonIronFist.addEventListener("click", () => {
+        if (audioIronFist.paused) {
+            audioIronFist.play();
+            botonIronFist.textContent = "⏸";
+        }
+        else {
+            audioIronFist.pause();
+            botonIronFist.textContent = "▶";
+        }
+    });
 }
-
-
+const progresoIronFist = document.querySelector("#progresoIronFist"); //Barra de audio para la canción 2
+if (audioIronFist && progresoIronFist) {
+    audioIronFist.addEventListener("timeupdate", () => {
+        if (audioIronFist.duration > 0) {
+            const porcentaje = (audioIronFist.currentTime / audioIronFist.duration) * 100;
+            progresoIronFist.value = String(porcentaje);
+        }
+    });
+}
+if (audioIronFist && progresoIronFist) {
+    progresoIronFist.addEventListener("input", () => {
+        const porcentaje = Number(progresoIronFist.value);
+        audioIronFist.currentTime = (porcentaje / 100) * audioIronFist.duration;
+    });
+}
 const audioNoRoots = document.querySelector("#audioNoRoots"); //Botón de play/pausa para la canción 3
 const botonNoRoots = document.querySelector("#botonNoRoots");
-
 if (audioNoRoots && botonNoRoots) {
-  botonNoRoots.addEventListener("click", () => {
-
-    if (audioNoRoots.paused) {
-      audioNoRoots.play();
-      botonNoRoots.textContent = "⏸";
-    } else {
-      audioNoRoots.pause();
-      botonNoRoots.textContent = "▶";
-    }
-
-  });
+    botonNoRoots.addEventListener("click", () => {
+        if (audioNoRoots.paused) {
+            audioNoRoots.play();
+            botonNoRoots.textContent = "⏸";
+        }
+        else {
+            audioNoRoots.pause();
+            botonNoRoots.textContent = "▶";
+        }
+    });
+}
+const progresoNoRoots = document.querySelector("#progresoNoRoots"); //Barra de audio para la canción 2
+if (audioNoRoots && progresoNoRoots) {
+    audioNoRoots.addEventListener("timeupdate", () => {
+        if (audioNoRoots.duration > 0) {
+            const porcentaje = (audioNoRoots.currentTime / audioNoRoots.duration) * 100;
+            progresoNoRoots.value = String(porcentaje);
+        }
+    });
+}
+if (audioNoRoots && progresoNoRoots) {
+    progresoNoRoots.addEventListener("input", () => {
+        const porcentaje = Number(progresoNoRoots.value);
+        audioNoRoots.currentTime = (porcentaje / 100) * audioNoRoots.duration;
+    });
 }
 export {};
 //# sourceMappingURL=main.js.map
