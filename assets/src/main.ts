@@ -79,65 +79,81 @@ const valorAlegriaIronFist: HTMLElement = document.querySelector("#valorAlegriaI
 
 if (alegriaIronFist && valorAlegriaIronFist) {
   alegriaIronFist.addEventListener("input", () => {
-    valorAlegriaIronFist.textContent = alegriaIronFist.textContent;
+    valorAlegriaIronFist.textContent = alegriaIronFist.value;
   });
 }
 
-const relajacionIronFist = document.querySelector("#relajacionIronFist")!;
-const valorRelajacionIronFist = document.querySelector("#valorRelajacionIronFist")!;
+const relajacionIronFist: HTMLInputElement = document.querySelector("#relajacionIronFist")!;
+const valorRelajacionIronFist: HTMLElement = document.querySelector("#valorRelajacionIronFist")!;
 
 if (relajacionIronFist && valorRelajacionIronFist) {
   relajacionIronFist.addEventListener("input", () => {
-    valorRelajacionIronFist.textContent = relajacionIronFist.textContent;
+    valorRelajacionIronFist.textContent = relajacionIronFist.value;
   });
 }
 
-const nostalgiaIronFist = document.querySelector("#nostalgiaIronFist")!;
-const valorNostalgiaIronFist = document.querySelector("#valorNostalgiaIronFist")!;
+const nostalgiaIronFist: HTMLInputElement = document.querySelector("#nostalgiaIronFist")!;
+const valorNostalgiaIronFist: HTMLElement = document.querySelector("#valorNostalgiaIronFist")!;
 
 if (nostalgiaIronFist && valorNostalgiaIronFist) {
   nostalgiaIronFist.addEventListener("input", () => {
-    valorNostalgiaIronFist.textContent = nostalgiaIronFist.textContent;
+    valorNostalgiaIronFist.textContent = nostalgiaIronFist.value;
   });
 }
 
 //Los 4 valores de la canción 3
 
-const energiaNoRoots = document.querySelector("#energiaNoRoots");
-const valorEnergiaNoRoots = document.querySelector("#valorEnergiaNoRoots");
+const energiaNoRoots: HTMLInputElement = document.querySelector("#energiaNoRoots")!;
+const valorEnergiaNoRoots: HTMLElement = document.querySelector("#valorEnergiaNoRoots")!;
 
 if (energiaNoRoots && valorEnergiaNoRoots) {
   energiaNoRoots.addEventListener("input", () => {
-    valorEnergiaNoRoots.textContent = energiaNoRoots.textContent;
+    valorEnergiaNoRoots.textContent = energiaNoRoots.value;
   });
 }
 
-const alegriaNoRoots = document.querySelector("#alegriaNoRoots");
-const valorAlegriaNoRoots = document.querySelector("#valorAlegriaNoRoots");
+const alegriaNoRoots: HTMLInputElement = document.querySelector("#alegriaNoRoots")!;
+const valorAlegriaNoRoots: HTMLElement = document.querySelector("#valorAlegriaNoRoots")!;
 
 if (alegriaNoRoots && valorAlegriaNoRoots) {
   alegriaNoRoots.addEventListener("input", () => {
-    valorAlegriaNoRoots.textContent = alegriaNoRoots.textContent;
+    valorAlegriaNoRoots.textContent = alegriaNoRoots.value;
   });
 }
 
-const relajacionNoRoots = document.querySelector("#relajacionNoRoots");
-const valorRelajacionNoRoots = document.querySelector("#valorRelajacionNoRoots");
+const relajacionNoRoots: HTMLInputElement = document.querySelector("#relajacionNoRoots")!;
+const valorRelajacionNoRoots: HTMLElement = document.querySelector("#valorRelajacionNoRoots")!;
 
 if (relajacionNoRoots && valorRelajacionNoRoots) {
   relajacionNoRoots.addEventListener("input", () => {
-    valorRelajacionNoRoots.textContent = relajacionNoRoots.textContent;
+    valorRelajacionNoRoots.textContent = relajacionNoRoots.value;
   });
 }
 
-const nostalgiaNoRoots = document.querySelector("#nostalgiaNoRoots");
-const valorNostalgiaNoRoots = document.querySelector("#valorNostalgiaNoRoots");
+const nostalgiaNoRoots: HTMLInputElement = document.querySelector("#nostalgiaNoRoots")!;
+const valorNostalgiaNoRoots: HTMLElement = document.querySelector("#valorNostalgiaNoRoots")!;
 
 if (nostalgiaNoRoots && valorNostalgiaNoRoots) {
   nostalgiaNoRoots.addEventListener("input", () => {
-    valorNostalgiaNoRoots.textContent = nostalgiaNoRoots.textContent;
+    valorNostalgiaNoRoots.textContent = nostalgiaNoRoots.value;
   });
 }
+
+energiaMyWay.addEventListener("input", () => {
+  canciones[0]!.energia = Number(energiaMyWay.value);
+});
+
+alegriaMyWay.addEventListener("input", () => {
+  canciones[0]!.alegria = Number(alegriaMyWay.value);
+});
+
+relajacionMyWay.addEventListener("input", () => {
+  canciones[0]!.relajacion = Number(relajacionMyWay.value);
+});
+
+nostalgiaMyWay.addEventListener("input", () => {
+  canciones[0]!.nostalgia = Number(nostalgiaMyWay.value);
+});
 
 const audioMyWay: HTMLAudioElement = document.querySelector("#audioMyWay")!; //Botón de play/pausa para la canción 1
 const botonMyWay: HTMLElement = document.querySelector("#botonMyWay")!;
@@ -250,7 +266,7 @@ if (audioNoRoots && botonNoRoots) {
   });
 }
 
-const progresoNoRoots: HTMLInputElement = document.querySelector("#progresoNoRoots")!; //Barra de audio para la canción 2
+const progresoNoRoots: HTMLInputElement = document.querySelector("#progresoNoRoots")!; //Barra de audio para la canción 3
 
 if (audioNoRoots && progresoNoRoots) {
 
@@ -279,3 +295,69 @@ if (audioNoRoots && progresoNoRoots) {
   });
 
 }
+
+// Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 1
+
+const analizarMyWay: HTMLElement = document.querySelector("#analizarMyWay")!;
+const resultadoMyWay: HTMLElement = document.querySelector("#resultadoMyWay")!;
+
+analizarMyWay.addEventListener("click", () => {
+
+  const energia = Number(energiaMyWay.value);
+  const alegria = Number(alegriaMyWay.value);
+  const relajacion = Number(relajacionMyWay.value);
+  const nostalgia = Number(nostalgiaMyWay.value);
+
+  let resultado = "";
+
+  if (energia > 70 && alegria > 70 && relajacion < 40 && nostalgia < 50) {
+
+    resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: No Roots, THE IRON FIST y My Way.";
+
+  } else if (energia > 70 && nostalgia > 70 && alegria < 50) {
+
+    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: My Way, THE IRON FIST y No Roots.";
+
+  } else if (energia < 30 && relajacion > 70 && nostalgia > 60) {
+
+    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+
+  } else if (alegria > 70 && relajacion > 70 && energia < 60) {
+
+    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: No Roots, My Way y THE IRON FIST.";
+
+  } else if (energia > 70 && relajacion < 30) {
+
+    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: THE IRON FIST, No Roots y My Way.";
+
+  } else if (nostalgia > 70 && alegria < 30) {
+
+    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+
+  } else if (relajacion > 70) {
+
+    resultado = "Tu selección tiene un mood relajado. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+
+  } else if (alegria > 70) {
+
+    resultado = "Tu selección tiene un mood alegre. Te recomendamos: No Roots, My Way y THE IRON FIST.";
+
+  } else if (energia < 30) {
+
+    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+
+  } else {
+
+    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar las tres canciones.";
+
+  }
+
+  resultadoMyWay.textContent = resultado;
+
+});
+
+//Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 2
+
+
+
+//Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 3
