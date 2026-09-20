@@ -20,9 +20,10 @@ h1 {
 .descripcion { 
   text-align: center;
   color: #111111;
-  /* font-size: 2.5rem; */
-  /* margin-bottom: 2.5rem; */
-  width: 20%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
 }
 
 section {
@@ -89,7 +90,7 @@ audio {
 }
 
 
-/* //Acordate de hacer media query tanto para tablet como teléfono
+/*Media query para teléfonos*/
 
 @media (max-width: 600px) {
 
@@ -105,4 +106,23 @@ audio {
     padding: 1.2rem;
   }
 
-} */
+}
+
+/*Media query para tablets*/
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  body {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    max-width: 40rem;
+    padding: 1.5rem;
+  }
+
+}
