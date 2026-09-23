@@ -275,7 +275,6 @@ analizarMyWay.addEventListener("click", () => {
     resultadoMyWay.textContent = resultado;
 });
 //Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 2
-// Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 2
 const analizarIronFist = document.querySelector("#analizarIronFist");
 const resultadoIronFist = document.querySelector("#resultadoIronFist");
 analizarIronFist.addEventListener("click", () => {

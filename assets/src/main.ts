@@ -362,31 +362,31 @@ analizarMyWay.addEventListener("click", () => {
 
   } else if (alegria >= 75 && relajacion >= 75 && energia <= 75) {
 
-    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: No Roots, My Way y THE IRON FIST.";
+  resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'Put Your Records On' de Corinne Bailey Rae, 'Three Little Birds' de Bob Marley y 'Sunday Morning' de Maroon 5.";
 
   } else if (energia >= 75 && relajacion <= 25) {
 
-    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: THE IRON FIST, No Roots y My Way.";
+    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'THE IRON FIST' de Masaru Yokoyama, 'Believer' de Imagine Dragons y 'Serious Steel' de Masaru Yokoyama.";
 
   } else if (nostalgia >= 75 && alegria <= 25) {
 
-    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'Karma Police' de Radiohead, 'The Sound of Silence' de Simon & Garfunkel y 'Can't Help Falling in Love' de Elvis Presley.";
 
   } else if (relajacion >= 75) {
 
-    resultado = "Tu selección tiene un mood relajado. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'No Surprises' de Radiohead, 'La Vie En Rose' de Édith Piaf y 'Three Little Birds' de Bob Marley.";
 
   } else if (alegria >= 75) {
 
-    resultado = "Tu selección tiene un mood alegre. Te recomendamos: No Roots, My Way y THE IRON FIST.";
+    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'Don't Stop Me Now' de Queen, 'Walking on Sunshine' de Katrina and the Waves y 'Put Your Records On' de Corinne Bailey Rae.";
 
   } else if (energia <= 25) {
 
-    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: My Way, No Roots y THE IRON FIST.";
+    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'The Sound of Silence' de Simon & Garfunkel, 'Can't Help Falling in Love' de Elvis Presley y 'No Surprises' de Radiohead.";
 
   } else {
 
-    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar las tres canciones: 'Can´t Help Falling in Love' de Elvis Presley, 'La Vie En Rose' de Édith Piaf y 'A Mi Manera' de Gipsy Kings";
+    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar las tres canciones: 'Can´t Help Falling in Love' de Elvis Presley, 'La Vie En Rose' de Édith Piaf y 'A Mi Manera' de Gipsy Kings.";
 
   }
 
@@ -395,8 +395,6 @@ analizarMyWay.addEventListener("click", () => {
 });
 
 //Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 2
-
-// Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 2
 
 const analizarIronFist: HTMLElement = document.querySelector("#analizarIronFist")!;
 const resultadoIronFist: HTMLElement = document.querySelector("#resultadoIronFist")!;
@@ -416,39 +414,39 @@ analizarIronFist.addEventListener("click", () => {
 
   } else if (energia >= 75 && nostalgia >= 75 && alegria <= 50) {
 
-    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Serious Steel' de Masaru Yokoyama, 'Karma Police' de Radiohead y 'My Way' de Frank Sinatra.";
+    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Run Boy Run' de Woodkid, 'Karma Police' de Radiohead y 'Everybody Wants to Rule the World' de Tears for Fears.";
 
   } else if (energia <= 25 && relajacion >= 75 && nostalgia >= 75) {
 
-    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: 'No Surprises' de Radiohead, 'La Vie En Rose' de Édith Piaf y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: 'The Night We Met' de Lord Huron, 'Space Song' de Beach House y 'No Surprises' de Radiohead.";
 
   } else if (alegria >= 75 && relajacion >= 75 && energia <= 75) {
 
-    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'No Roots' de Alice Merton, 'Put Your Records On' de Corinne Bailey Rae y 'Three Little Birds' de Bob Marley.";
+    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'Island in the Sun' de Weezer, 'Sunday Morning' de Maroon 5 y 'Three Little Birds' de Bob Marley.";
 
   } else if (energia >= 75 && relajacion <= 25) {
 
-    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'THE IRON FIST' de Masaru Yokoyama, 'Serious Steel' de Masaru Yokoyama y 'Believer' de Imagine Dragons.";
+    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'Knights of Cydonia' de Muse, 'Believer' de Imagine Dragons y 'Run Boy Run' de Woodkid.";
 
   } else if (nostalgia >= 75 && alegria <= 25) {
 
-    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'Karma Police' de Radiohead, 'My Way' de Frank Sinatra y 'No Surprises' de Radiohead.";
+    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'The Night We Met' de Lord Huron, 'Everybody Wants to Rule the World' de Tears for Fears y 'Space Song' de Beach House.";
 
   } else if (relajacion >= 75) {
 
-    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'No Surprises' de Radiohead, 'La Vie En Rose' de Édith Piaf y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'Space Song' de Beach House, 'Holocene' de Bon Iver y 'Sunset Lover' de Petit Biscuit.";
 
   } else if (alegria >= 75) {
 
-    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'No Roots' de Alice Merton, 'Don't Stop Me Now' de Queen y 'Walking on Sunshine' de Katrina and the Waves.";
+    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'Dare' de Gorillaz, 'Walking on Sunshine' de Katrina and the Waves y 'Mr. Blue Sky' de Electric Light Orchestra.";
 
   } else if (energia <= 25) {
 
-    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'No Surprises' de Radiohead, 'The Sound of Silence' de Simon & Garfunkel y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'Holocene' de Bon Iver, 'The Night We Met' de Lord Huron y 'Sunset Lover' de Petit Biscuit.";
 
   } else {
 
-    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'Karma Police' de Radiohead, 'No Roots' de Alice Merton y 'My Way' de Frank Sinatra.";
+    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'Everybody Wants to Rule the World' de Tears for Fears, 'Island in the Sun' de Weezer y 'Mr. Blue Sky' de Electric Light Orchestra.";
 
   }
 
@@ -472,43 +470,43 @@ analizarNoRoots.addEventListener("click", () => {
 
   if (energia >= 75 && alegria >= 75 && relajacion <= 25 && nostalgia <= 50) {
 
-    resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: 'No Roots' de Alice Merton, 'Don't Stop Me Now' de Queen y 'Serious Steel' de Masaru Yokoyama.";
+    resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: 'Are You Gonna Be My Girl' de Jet, 'Electric Love' de BØRNS y 'Lisztomania' de Phoenix.";
 
   } else if (energia >= 75 && nostalgia >= 75 && alegria <= 50) {
 
-    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, 'Karma Police' de Radiohead y 'My Way' de Frank Sinatra.";
+    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, '505' de Arctic Monkeys y 'Youth' de Daughter.";
 
   } else if (energia <= 25 && relajacion >= 75 && nostalgia >= 75) {
 
-    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: 'No Surprises' de Radiohead, 'Habits (Stay High)' de Tove Lo y 'La Vie En Rose' de Édith Piaf.";
+    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: 'Mystery of Love' de Sufjan Stevens, 'Cherry Wine' de Hozier y 'Roslyn' de Bon Iver & St. Vincent.";
 
   } else if (alegria >= 75 && relajacion >= 75 && energia <= 75) {
 
-    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'No Roots' de Alice Merton, 'Put Your Records On' de Corinne Bailey Rae y 'Three Little Birds' de Bob Marley.";
+    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'Home' de Edward Sharpe & The Magnetic Zeros, 'Young Folks' de Peter Bjorn and John y 'Sweet Pea' de Amos Lee.";
 
   } else if (energia >= 75 && relajacion <= 25) {
 
-    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'No Roots' de Alice Merton, 'Serious Steel' de Masaru Yokoyama y 'Believer' de Imagine Dragons.";
+    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'Reptilia' de The Strokes, 'I Bet You Look Good on the Dancefloor' de Arctic Monkeys y 'Joker and the Thief' de Wolfmother.";
 
   } else if (nostalgia >= 75 && alegria <= 25) {
 
-    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, 'Karma Police' de Radiohead y 'My Way' de Frank Sinatra.";
+    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, 'Scott Street' de Phoebe Bridgers y 'About Today' de The National.";
 
   } else if (relajacion >= 75) {
 
-    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'No Surprises' de Radiohead, 'La Vie En Rose' de Édith Piaf y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'Holocene' de Bon Iver, 'Show Me How' de Men I Trust y 'Space Song' de Beach House.";
 
   } else if (alegria >= 75) {
 
-    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'No Roots' de Alice Merton, 'Walking on Sunshine' de Katrina and the Waves y 'Don't Stop Me Now' de Queen.";
+    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'Tongue Tied' de Grouplove, '1901' de Phoenix y 'Walking on a Dream' de Empire of the Sun.";
 
   } else if (energia <= 25) {
 
-    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'No Surprises' de Radiohead, 'Habits (Stay High)' de Tove Lo y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'Nothing's Gonna Hurt You Baby' de Cigarettes After Sex, 'First Day of My Life' de Bright Eyes y 'Heartbeats' de José González.";
 
   } else {
 
-    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'No Roots' de Alice Merton, 'Karma Police' de Radiohead y 'Can't Help Falling in Love' de Elvis Presley.";
+    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'Midnight City' de M83, 'Sweet Disposition' de The Temper Trap y 'Young Blood' de The Naked and Famous.";
 
   }
 
