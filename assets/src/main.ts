@@ -17,13 +17,19 @@ class Cancion {
   }
 }
 
-const canciones: Cancion[] = [ //Nombres de las 3 canciones y sus respectivos artistas
-  new Cancion("My Way", "Frank Sinatra"),
-  new Cancion("THE IRON FIST", "Masaru Yokoyama"),
-  new Cancion("No Roots", "Alice Merton")
-];
+let canciones: Cancion[] = [];
 
-console.log(canciones);
+fetch("./assets/data/canciones.json")
+  .then((respuesta) => respuesta.json())
+  .then((datos) => {
+
+    canciones = [
+      new Cancion(datos[0].titulo, datos[0].artista),
+      new Cancion(datos[1].titulo, datos[1].artista),
+      new Cancion(datos[2].titulo, datos[2].artista)
+    ];
+
+    console.log(canciones);
 
 const audioMyWay: HTMLAudioElement = document.querySelector("#audioMyWay")!; //Botón de play/pausa para la canción 1
 const botonMyWay: HTMLElement = document.querySelector("#botonMyWay")!;
@@ -511,5 +517,7 @@ analizarNoRoots.addEventListener("click", () => {
   }
 
   resultadoNoRoots.textContent = resultado;
+
+});
 
 });
