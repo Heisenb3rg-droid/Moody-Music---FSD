@@ -87,14 +87,12 @@ section p span {
   font-weight: bold;
 }
 
-audio {
+audio, #analizarMyWay, #analizarIronFist, #analizarNoRoots {
   width: 100%;
   margin: 1rem 0;
 }
 
-#resultadoMyWay, #resultadoIronFist, #resultadoNoRoots {
-  margin: 1em 0em 0em 0em;
-}
+#resultadoMyWay, #resultadoIronFist, #resultadoNoRoots { margin: 1em 0em 0em 0em; }
 
 /*Media query para teléfonos*/
 

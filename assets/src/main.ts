@@ -521,3 +521,11 @@ analizarNoRoots.addEventListener("click", () => {
 });
 
 });
+
+fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
+  .then((respuesta) => respuesta.json())
+  .then((datos) => {
+    console.log(datos);
+console.log(datos.results[0].trackName);
+console.log(datos.results[0].artistName);
+  });

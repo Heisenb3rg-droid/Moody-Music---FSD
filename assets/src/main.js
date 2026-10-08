@@ -361,5 +361,10 @@ fetch("./assets/data/canciones.json")
         resultadoNoRoots.textContent = resultado;
     });
 });
+fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
+    .then((respuesta) => respuesta.json())
+    .then((datos) => {
+    console.log(datos);
+});
 export {};
 //# sourceMappingURL=main.js.map
