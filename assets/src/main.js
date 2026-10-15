@@ -322,14 +322,37 @@ fetch("./assets/data/canciones.json")
     //Análisis y recomendaciones basadas en las elecciones de los usuarios sobre los 4 valores de la canción 3
     const analizarNoRoots = document.querySelector("#analizarNoRoots");
     const resultadoNoRoots = document.querySelector("#resultadoNoRoots");
+    const recomendacionNoRoots = document.querySelector("#recomendacionNoRoots");
+    function buscarCancion(termino, elementoResultado) {
+        fetch(`https://itunes.apple.com/search?term=${termino}&media=music&limit=3`)
+            .then((respuesta) => respuesta.json())
+            .then((datos) => {
+            if (datos.results.length > 0) {
+                const titulo = datos.results[0].trackName;
+                const artista = datos.results[0].artistName;
+                elementoResultado.textContent =
+                    "Recomendación: " + titulo + " — " + artista;
+            }
+            else {
+                elementoResultado.textContent = "No se encontraron recomendaciones.";
+            }
+        })
+            .catch(() => {
+            elementoResultado.textContent = "No se pudo cargar la recomendación.";
+        });
+    }
     analizarNoRoots.addEventListener("click", () => {
         const energia = Number(energiaNoRoots.value);
         const alegria = Number(alegriaNoRoots.value);
         const relajacion = Number(relajacionNoRoots.value);
         const nostalgia = Number(nostalgiaNoRoots.value);
         let resultado = "";
+        let terminoBusqueda = "";
         if (energia >= 75 && alegria >= 75 && relajacion <= 25 && nostalgia <= 50) {
-            resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: 'Are You Gonna Be My Girl' de Jet, 'Electric Love' de BØRNS y 'Lisztomania' de Phoenix.";
+            //resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: 'Are You Gonna Be My Girl' de Jet, 'Electric Love' de BØRNS y 'Lisztomania' de Phoenix.";
+            resultado = "Tu selección tiene un mood muy energético, alegre y activo.";
+            terminoBusqueda = "upbeat indie rock";
+            console.log(terminoBusqueda);
         }
         else if (energia >= 75 && nostalgia >= 75 && alegria <= 50) {
             resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, '505' de Arctic Monkeys y 'Youth' de Daughter.";
@@ -359,8 +382,12 @@ fetch("./assets/data/canciones.json")
             resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'Midnight City' de M83, 'Sweet Disposition' de The Temper Trap y 'Young Blood' de The Naked and Famous.";
         }
         resultadoNoRoots.textContent = resultado;
+        if (terminoBusqueda !== "") {
+            buscarCancion(terminoBusqueda, recomendacionNoRoots);
+        }
     });
 });
+export {};
 // BÚSQUEDAS DE PRUEBA DE LA API DE ITUNES
 // No Roots — Alice Merton
 // https://itunes.apple.com/search?term=No+Roots&media=music&limit=3
@@ -368,26 +395,24 @@ fetch("./assets/data/canciones.json")
 // https://itunes.apple.com/search?term=My+Way+Frank+Sinatra&media=music&limit=3
 // THE IRON FIST — Masaru Yokoyama
 // https://itunes.apple.com/search?term=THE+IRON+FIST+Masaru+Yokoyama&media=music&limit=3
-const recomendacionNoRoots = document.querySelector("#recomendacionNoRoots");
-if (recomendacionNoRoots) {
-    fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
-        .then((respuesta) => respuesta.json())
-        .then((datos) => {
-        if (datos.results.length > 0) {
-            const titulo = datos.results[0].trackName;
-            const artista = datos.results[0].artistName;
-            recomendacionNoRoots.textContent =
-                "Recomendación: " + titulo + " — " + artista;
-        }
-        else {
-            recomendacionNoRoots.textContent =
-                "No se encontraron recomendaciones.";
-        }
-    })
-        .catch(() => {
+/*if (recomendacionNoRoots) {
+  fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
+    .then((respuesta) => respuesta.json())
+    .then((datos) => {
+      if (datos.results.length > 0) {
+        const titulo: string = datos.results[0].trackName;
+        const artista: string = datos.results[0].artistName;
+
         recomendacionNoRoots.textContent =
-            "No se pudo cargar la recomendación.";
+          "Recomendación: " + titulo + " — " + artista;
+      } else {
+        recomendacionNoRoots.textContent =
+          "No se encontraron recomendaciones.";
+      }
+    })
+    .catch(() => {
+      recomendacionNoRoots.textContent =
+        "No se pudo cargar la recomendación.";
     });
-}
-export {};
+}*/ 
 //# sourceMappingURL=main.js.map

@@ -465,6 +465,27 @@ analizarIronFist.addEventListener("click", () => {
 const analizarNoRoots: HTMLElement = document.querySelector("#analizarNoRoots")!;
 const resultadoNoRoots: HTMLElement = document.querySelector("#resultadoNoRoots")!;
 
+const recomendacionNoRoots: HTMLElement | null = document.querySelector("#recomendacionNoRoots")!;
+
+function buscarCancion(termino: string, elementoResultado: HTMLElement): void {
+  fetch(`https://itunes.apple.com/search?term=${termino}&media=music&limit=3`)
+    .then((respuesta) => respuesta.json())
+    .then((datos) => {
+      if (datos.results.length > 0) {
+        const titulo: string = datos.results[0].trackName;
+        const artista: string = datos.results[0].artistName;
+
+        elementoResultado.textContent =
+          "Recomendación: " + titulo + " — " + artista;
+      } else {
+        elementoResultado.textContent = "No se encontraron recomendaciones.";
+      }
+    })
+    .catch(() => {
+      elementoResultado.textContent = "No se pudo cargar la recomendación.";
+    });
+}
+
 analizarNoRoots.addEventListener("click", () => {
 
   const energia = Number(energiaNoRoots.value);
@@ -473,50 +494,71 @@ analizarNoRoots.addEventListener("click", () => {
   const nostalgia = Number(nostalgiaNoRoots.value);
 
   let resultado = "";
+  let terminoBusqueda = "";
 
-  if (energia >= 75 && alegria >= 75 && relajacion <= 25 && nostalgia <= 50) {
+if (energia >= 75 && alegria >= 75 && relajacion <= 25 && nostalgia <= 50) {
 
-    resultado = "Tu selección tiene un mood muy energético, alegre y activo. Te recomendamos: 'Are You Gonna Be My Girl' de Jet, 'Electric Love' de BØRNS y 'Lisztomania' de Phoenix.";
+  resultado = "Tu selección tiene un mood muy energético, alegre y activo.";
+  terminoBusqueda = "upbeat indie rock";
 
-  } else if (energia >= 75 && nostalgia >= 75 && alegria <= 50) {
+} else if (energia >= 75 && nostalgia >= 75 && alegria <= 50) {
 
-    resultado = "Tu selección tiene un mood intenso y nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, '505' de Arctic Monkeys y 'Youth' de Daughter.";
+  resultado = "Tu selección tiene un mood intenso y nostálgico.";
+  terminoBusqueda = "nostalgic alternative rock";
 
-  } else if (energia <= 25 && relajacion >= 75 && nostalgia >= 75) {
+} else if (energia <= 25 && relajacion >= 75 && nostalgia >= 75) {
 
-    resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico. Te recomendamos: 'Mystery of Love' de Sufjan Stevens, 'Cherry Wine' de Hozier y 'Roslyn' de Bon Iver & St. Vincent.";
+  resultado = "Tu selección tiene un mood tranquilo, relajado y nostálgico.";
+  terminoBusqueda = "mellow indie folk";
 
-  } else if (alegria >= 75 && relajacion >= 75 && energia <= 75) {
+} else if (alegria >= 75 && relajacion >= 75 && energia <= 75) {
 
-    resultado = "Tu selección tiene un mood alegre y relajado. Te recomendamos: 'Home' de Edward Sharpe & The Magnetic Zeros, 'Young Folks' de Peter Bjorn and John y 'Sweet Pea' de Amos Lee.";
+  resultado = "Tu selección tiene un mood alegre y relajado.";
+  terminoBusqueda = "feel good indie";
 
-  } else if (energia >= 75 && relajacion <= 25) {
+} else if (energia >= 75 && relajacion <= 25) {
 
-    resultado = "Tu selección tiene un mood intenso y con mucha energía. Te recomendamos: 'Reptilia' de The Strokes, 'I Bet You Look Good on the Dancefloor' de Arctic Monkeys y 'Joker and the Thief' de Wolfmother.";
+  resultado = "Tu selección tiene un mood intenso y con mucha energía.";
+  terminoBusqueda = "high energy rock";
 
-  } else if (nostalgia >= 75 && alegria <= 25) {
+} else if (nostalgia >= 75 && alegria <= 25) {
 
-    resultado = "Tu selección tiene un mood principalmente nostálgico. Te recomendamos: 'Habits (Stay High)' de Tove Lo, 'Scott Street' de Phoebe Bridgers y 'About Today' de The National.";
+  resultado = "Tu selección tiene un mood principalmente nostálgico.";
+  terminoBusqueda = "melancholic indie";
 
-  } else if (relajacion >= 75) {
+} else if (relajacion >= 75) {
 
-    resultado = "Tu selección tiene un mood relajado. Te recomendamos: 'Holocene' de Bon Iver, 'Show Me How' de Men I Trust y 'Space Song' de Beach House.";
+  resultado = "Tu selección tiene un mood relajado.";
+  terminoBusqueda = "chill indie";
 
-  } else if (alegria >= 75) {
+} else if (alegria >= 75) {
 
-    resultado = "Tu selección tiene un mood alegre. Te recomendamos: 'Tongue Tied' de Grouplove, '1901' de Phoenix y 'Walking on a Dream' de Empire of the Sun.";
+  resultado = "Tu selección tiene un mood alegre.";
+  terminoBusqueda = "upbeat indie pop";
 
-  } else if (energia <= 25) {
+} else if (energia <= 25) {
 
-    resultado = "Tu selección tiene un mood de baja energía. Te recomendamos: 'Nothing's Gonna Hurt You Baby' de Cigarettes After Sex, 'First Day of My Life' de Bright Eyes y 'Heartbeats' de José González.";
+  resultado = "Tu selección tiene un mood de baja energía.";
+  terminoBusqueda = "mellow acoustic music";
 
-  } else {
+} else {
 
-    resultado = "Tu selección tiene un mood equilibrado. Te recomendamos explorar: 'Midnight City' de M83, 'Sweet Disposition' de The Temper Trap y 'Young Blood' de The Naked and Famous.";
+  resultado = "Tu selección tiene un mood equilibrado.";
+  terminoBusqueda = "indie alternative";
 
-  }
+}
+
+resultadoNoRoots.textContent = resultado;
+
+if (terminoBusqueda !== "") {
+  buscarCancion(terminoBusqueda, recomendacionNoRoots);
+}
 
   resultadoNoRoots.textContent = resultado;
+
+  if (terminoBusqueda !== "") {
+  buscarCancion(terminoBusqueda, recomendacionNoRoots);
+  }
 
 });
 
@@ -532,27 +574,3 @@ analizarNoRoots.addEventListener("click", () => {
 
 // THE IRON FIST — Masaru Yokoyama
 // https://itunes.apple.com/search?term=THE+IRON+FIST+Masaru+Yokoyama&media=music&limit=3
-
-
-const recomendacionNoRoots: HTMLElement | null = document.querySelector("#recomendacionNoRoots");
-
-if (recomendacionNoRoots) {
-  fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-      if (datos.results.length > 0) {
-        const titulo: string = datos.results[0].trackName;
-        const artista: string = datos.results[0].artistName;
-
-        recomendacionNoRoots.textContent =
-          "Recomendación: " + titulo + " — " + artista;
-      } else {
-        recomendacionNoRoots.textContent =
-          "No se encontraron recomendaciones.";
-      }
-    })
-    .catch(() => {
-      recomendacionNoRoots.textContent =
-        "No se pudo cargar la recomendación.";
-    });
-}
