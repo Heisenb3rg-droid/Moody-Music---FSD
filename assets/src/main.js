@@ -361,10 +361,33 @@ fetch("./assets/data/canciones.json")
         resultadoNoRoots.textContent = resultado;
     });
 });
-fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-    console.log(datos);
-});
+// BÚSQUEDAS DE PRUEBA DE LA API DE ITUNES
+// No Roots — Alice Merton
+// https://itunes.apple.com/search?term=No+Roots&media=music&limit=3
+// My Way — Frank Sinatra
+// https://itunes.apple.com/search?term=My+Way+Frank+Sinatra&media=music&limit=3
+// THE IRON FIST — Masaru Yokoyama
+// https://itunes.apple.com/search?term=THE+IRON+FIST+Masaru+Yokoyama&media=music&limit=3
+const recomendacionNoRoots = document.querySelector("#recomendacionNoRoots");
+if (recomendacionNoRoots) {
+    fetch("https://itunes.apple.com/search?term=No+Roots&media=music&limit=3")
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+        if (datos.results.length > 0) {
+            const titulo = datos.results[0].trackName;
+            const artista = datos.results[0].artistName;
+            recomendacionNoRoots.textContent =
+                "Recomendación: " + titulo + " — " + artista;
+        }
+        else {
+            recomendacionNoRoots.textContent =
+                "No se encontraron recomendaciones.";
+        }
+    })
+        .catch(() => {
+        recomendacionNoRoots.textContent =
+            "No se pudo cargar la recomendación.";
+    });
+}
 export {};
 //# sourceMappingURL=main.js.map
